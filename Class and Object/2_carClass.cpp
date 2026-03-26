@@ -1,6 +1,7 @@
 // using static vlaues
 
 #include <iostream>
+#include<string>
 using namespace std;
 
 class Car

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class bankAccount
@@ -17,12 +18,12 @@ public:
         cin >> balance;
     }
 
-    void depositeAmount()
+    void depositAmount()
     {
 
         int amount;
 
-        cout << "\nEnter Deposite Amount: ";
+        cout << "\nEnter Deposit Amount: ";
         cin >> amount;
 
         balance += amount;
@@ -48,7 +49,7 @@ public:
 
     void showBalance(){
         cout<<"\nYour Name: "<<name<<endl;
-        cout<<"Balance: "<<balance;
+        cout<<"Balance: "<<balance << endl;
     }
 };
 
@@ -58,7 +59,7 @@ main()
     bankAccount user1;
 
     user1.createAccount();
-    user1.depositeAmount();
+    user1.depositAmount();
     user1.withdrawAmount();
     user1.showBalance();
 
