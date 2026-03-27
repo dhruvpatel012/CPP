@@ -42,8 +42,6 @@ public:
 
     void printData()
     {
-
-        cout << "\n\n|| ----==== Student Information ----==== ||" << endl;
         cout << "\nId: " << stuId << endl;
         cout << "Name: " << stuName << endl;
         cout << "Age: " << stuAge << endl;
@@ -67,6 +65,7 @@ int main()
    }
 
    for(int i=0; i<2; i++){
+    cout << "\n\n|| ----==== Student Information " << i+1 << " ----==== ||" << endl;
     s[i].printData();
    }
 
