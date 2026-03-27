@@ -1,7 +1,7 @@
 // using static vlaues
 
 #include <iostream>
-using namespace st
+using namespace std;
 
 class Student
 {
