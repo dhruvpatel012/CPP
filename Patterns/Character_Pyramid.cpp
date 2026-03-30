@@ -19,3 +19,12 @@ int main(){
 
     return 0;
 }
+
+// output:- 
+
+// Enter size of row: 5
+// A 
+// B C 
+// D E F 
+// G H I J 
+// K L M N O 
