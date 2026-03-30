@@ -26,3 +26,12 @@ int main()
 
     return 0;
 }
+
+// output:- 
+
+// Enter a size of row:5
+//     *
+//    **
+//   ***
+//  ****
+// *****
