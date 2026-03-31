@@ -42,7 +42,7 @@ public:
 int main()
 {
 
-    diamondCompany c1(1,"EZ-TECH",200,15.5,50000,400000,"Dhruv Patel");
+    diamondCompany c1(1,"EZ-TECH",200,15.5,50000,400000,"Dhruv Patel"); // static value
 
     c1.printData();
 
