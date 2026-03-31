@@ -9,49 +9,51 @@ private:
 public:
     void getData()
     {
-      while(1){
-        cout << "\n|| -> -> -> TIME CONVERTER <- <- <- ||\n\n";
-        cout << "1. Second to HH:MM:SS\n";
-        cout << "2. HH:MM:SS to Second\n";
-
-        cout << "\nEnter Your Choice (1 or 2): ";
-        cin >> choice;
-
-        switch (choice)
+        choice = 0;                 
+        while (choice != 3)
         {
-        case 1:
-            cout << "\nEnter Seconds: ";
-            cin >> sec;
+            cout << "\n|| -> -> -> TIME CONVERTER <- <- <- ||\n\n";
+            cout << "1. Second to HH:MM:SS\n";
+            cout << "2. HH:MM:SS to Second\n";
 
-            hour = sec / 3600;
-            remaining = sec - (hour * 3600);
+            cout << "\nEnter Your Choice (1 or 2): ";
+            cin >> choice;
 
-            min = remaining / 60;
-            second = remaining - (min * 60);
+            switch (choice)
+            {
+            case 1:
+                cout << "\nEnter Seconds: ";
+                cin >> sec;
 
-            cout << "\nTime = " << hour << ":" << min << ":" << second << endl;
-            break;
+                hour = sec / 3600;
+                remaining = sec - (hour * 3600);
 
-        case 2:
-            cout << "\nEnter Hours: ";
-            cin >> hour;
+                min = remaining / 60;
+                second = remaining - (min * 60);
 
-            cout << "\nEnter Minutes: ";
-            cin >> min;
+                cout << "\nTime = " << hour << ":" << min << ":" << second << endl;
+                break;
 
-            cout << "\nEnter Seconds: ";
-            cin >> second;
+            case 2:
+                cout << "\nEnter Hours: ";
+                cin >> hour;
 
-            sec = (hour * 3600) + (min * 60) + second;
+                cout << "\nEnter Minutes: ";
+                cin >> min;
 
-            cout << "\nTotal Seconds = " << sec << endl;
-            break;
+                cout << "\nEnter Seconds: ";
+                cin >> second;
 
-        default:
-            cout << "\nInvalid Choice,Try again..!" << endl;
+                sec = (hour * 3600) + (min * 60) + second;
+
+                cout << "\nTotal Seconds = " << sec << endl;
+                break;
+
+            default:
+                cout << "\nInvalid Choice,Try again..!" << endl;
+            }
         }
     }
-      }
 };
 
 int main()
