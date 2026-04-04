@@ -35,12 +35,20 @@ public:
 class Developer : public Employee
 {
 private:
+    int devId;
+    string devName;
     string codingLanguage;
 
 public:
     void GetDevInfo()
     {
+        cout << "Enter Developer Id: ";
+        cin >> devId;
+
         cin.ignore();
+        cout<<"Enter Developer Name: ";
+        getline(cin,devName);
+
         cout << "Enter Programming Language: ";
         getline(cin, codingLanguage);
     }
@@ -48,7 +56,9 @@ public:
     void DisplayDevInfo()
     {
         cout << "\n|| ---=== Developer Information ===--- ||" << endl;
-        cout << "\nProgramming Language: " << codingLanguage << endl;
+        cout<<"\nDeveloper Id: "<<devId<<endl;
+        cout<<"Developer Name: "<<devName<<endl;
+        cout <<"Programming Language: " << codingLanguage << endl;
     }
 };
 
@@ -62,5 +72,5 @@ int main()
     d1.DisplayEmpInfo();
     d1.DisplayDevInfo();
 
-        return 0;
+    return 0;
 }
