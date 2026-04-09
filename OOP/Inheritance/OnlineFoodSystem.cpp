@@ -135,8 +135,22 @@ public:
     }
 };
 
-class Server{
+class Server : public DeliveryPerson
+{
+private:
+    string systemName;
 
+    public:
+
+    void showEntireInfo(){
+         systemName = "Goti Lo";
+         cout<<"\nSystem Name: "<<systemName<<endl;
+
+          displayUserInfo();
+          dispolayPersonInfo();
+
+         
+    }
 };
 
 int main()
