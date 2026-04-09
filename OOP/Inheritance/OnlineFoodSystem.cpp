@@ -116,7 +116,7 @@ private:
 public:
     void getPersonInfo()
     {
-        cout << "\nEnter Delivery Person Id: ";
+        cout << "\n\nEnter Delivery Person Id: ";
         cin >> personId;
 
         cin.ignore();
@@ -140,16 +140,16 @@ class Server : public DeliveryPerson
 private:
     string systemName;
 
-    public:
+public:
+    void showEntireInfo()
+    {
+        systemName = "Goti Lo";
+        cout << "\n\nSystem Name: " << systemName << endl
+             << endl;
+        ;
 
-    void showEntireInfo(){
-         systemName = "Goti Lo";
-         cout<<"\nSystem Name: "<<systemName<<endl;
-
-          displayUserInfo();
-          dispolayPersonInfo();
-
-         
+        displayUserInfo();
+        dispolayPersonInfo();
     }
 };
 
@@ -197,6 +197,7 @@ int main()
     } while (choice != 5);
 
     d1.getPersonInfo();
+    d1.showEntireInfo();
 
     return 0;
 }
