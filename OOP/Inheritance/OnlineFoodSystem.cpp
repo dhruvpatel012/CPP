@@ -197,6 +197,22 @@ int main()
     } while (choice != 5);
 
     d1.getPersonInfo();
+    if (choice == 1)
+    {
+        d1.Pizaa();
+    }
+    else if (choice == 2)
+    {
+        d1.Burger();
+    }
+    else if (choice == 3)
+    {
+        d1.pasta();
+    }
+    else if (choice == 4)
+    {
+        d1.Dosa();
+    }
     d1.showEntireInfo();
 
     return 0;
