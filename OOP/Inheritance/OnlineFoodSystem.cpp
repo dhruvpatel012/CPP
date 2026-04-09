@@ -45,11 +45,11 @@ public:
         foodName = "Pizza";
         foodPrice = 300;
 
-        cout << "Food Name: " << foodName << endl;
+        cout << "\nFood Name: " << foodName << endl;
 
         cout << "Food Price: " << foodPrice << endl;
 
-        cout << "Enter Quantity: ";
+        cout << "\nEnter Quantity: ";
         cin >> foodQnty;
 
         totalValue = foodPrice * foodQnty;
@@ -62,7 +62,7 @@ public:
         foodName = "Burger";
         foodPrice = 120;
 
-        cout << "Food Name: " << foodName << endl;
+        cout << "\nFood Name: " << foodName << endl;
         cout << "Food Price: " << foodPrice << endl;
 
         cout << "\nEnter Quantity: ";
@@ -94,7 +94,7 @@ public:
         foodName = "Dosa";
         foodPrice = 280;
 
-        cout << "Food Name: " << foodName << endl;
+        cout << "\nFood Name: " << foodName << endl;
         cout << "Food Price: " << foodPrice << endl;
 
         cout << "\nEnter Quantity: ";
@@ -155,7 +155,7 @@ private:
 
 int main()
 {
-    DeliveryPerson d1;
+    Server d1;
     d1.getUserInfo();
 
     int choice;
