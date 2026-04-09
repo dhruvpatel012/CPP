@@ -135,6 +135,10 @@ public:
     }
 };
 
+class Server{
+
+};
+
 int main()
 {
     DeliveryPerson d1;
