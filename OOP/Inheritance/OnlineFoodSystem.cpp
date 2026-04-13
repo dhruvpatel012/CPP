@@ -127,7 +127,7 @@ public:
         cin >> personPhoneNo;
     }
 
-    void dispolayPersonInfo()
+    void displayPersonInfo()
     {
         cout << "\nDelivery Person Id: " << personId << endl;
         cout << "Delivery Person Name: " << personName << endl;
@@ -149,7 +149,7 @@ public:
         ;
 
         displayUserInfo();
-        dispolayPersonInfo();
+        displayPersonInfo();
     }
 };
 
@@ -197,6 +197,8 @@ int main()
     } while (choice != 5);
 
     d1.getPersonInfo();
+
+    
     if (choice == 1)
     {
         d1.Pizaa();
@@ -213,6 +215,8 @@ int main()
     {
         d1.Dosa();
     }
+
+
     d1.showEntireInfo();
 
     return 0;
