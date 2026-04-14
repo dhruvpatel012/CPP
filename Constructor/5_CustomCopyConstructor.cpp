@@ -16,6 +16,13 @@ public:
         this->address = address; 
     }
 
+    student(student &orgObj){
+        cout<<"custom copy constructor...\n";
+        this->name = orgObj.name;
+        this->id = orgObj.id;
+        this->address = orgObj.address; 
+    }
+
     void showInfo()
     {
         cout << "Name: " << name << endl;
@@ -30,7 +37,7 @@ int main()
     student s1("Nobita", 178, "Gujarat");
     // s1.showInfo();
 
-    student s2(s1); // default copy constructor invoke(call)...
+    student s2(s1);
     s2.showInfo(); 
 
     return 0;
