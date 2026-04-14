@@ -144,8 +144,7 @@ public:
     void showEntireInfo()
     {
         systemName = "Goti Lo";
-        cout << "\n\nSystem Name: " << systemName << endl
-             << endl;
+        cout << "\n\nSystem Name: " << systemName << endl << endl;
         ;
 
         displayUserInfo();
@@ -198,7 +197,6 @@ int main()
 
     d1.getPersonInfo();
 
-    
     if (choice == 1)
     {
         d1.Pizaa();
@@ -216,8 +214,8 @@ int main()
         d1.Dosa();
     }
 
+     d1.showEntireInfo();
 
-    d1.showEntireInfo();
 
     return 0;
 }
