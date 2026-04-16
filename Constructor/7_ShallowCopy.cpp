@@ -15,7 +15,7 @@ public:
 int main()
 {
 
-    Demo obj1(10);
+    Demo obj1(10); //Memory looks like:- obj1:data ---> [10] (heap memory)
     cout << *(obj1.data) << endl; // here * is used for data not for object and its give output: 10
 
     Demo obj2 = obj1;
