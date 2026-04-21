@@ -182,7 +182,8 @@ class Admin : public Server
 public:
     void FinalInfo()
     {
-        cout << "\nFood\t"<<"Price\t"<<"Qunty\t"<<"TotalPrice"<<endl;
+        cout << "\nFood\tPrice\tQunty\tTotalPrice\n";
+        cout<<"-----------------------------------";
 
         if (pizzaQunty > 0)
         {
@@ -201,7 +202,7 @@ public:
             cout << "\nDosa\t" << dosaPrice << "\t" << dosaQunty << "\t" << dosaTotal << endl;
         }
 
-        cout << "\nYour Total Bill: " << totalBill << endl;
+        cout << "\nYour Total Bill: "<<totalBill << endl;
     }
 };
 
@@ -218,6 +219,7 @@ int main()
 
         cout << "\nEnter Youre Choice: ";
         cin >> choice;
+
 
         switch (choice)
         {
@@ -249,23 +251,6 @@ int main()
     } while (choice != 5);
 
     d1.getPersonInfo();
-
-    if (choice == 1)
-    {
-        d1.Pizaa();
-    }
-    else if (choice == 2)
-    {
-        d1.Burger();
-    }
-    else if (choice == 3)
-    {
-        d1.pasta();
-    }
-    else if (choice == 4)
-    {
-        d1.Dosa();
-    }
 
     d1.showEntireInfo();
 
