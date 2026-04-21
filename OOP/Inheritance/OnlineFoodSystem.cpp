@@ -35,74 +35,99 @@ class Food : public User
 {
 private:
     string foodName;
-    int foodQnty;
-    int foodPrice;
     int totalValue;
+
+protected:
+    int pizzaQunty = 0;
+    int pizzaPrice = 0;
+    int pizzaTotal = 0;
+
+    int burgerQunty = 0;
+    int burgerPrice = 0;
+    int burgerTotal = 0;
+
+    int pastaQunty = 0;
+    int pastaPrice = 0;
+    int pastaTotal = 0;
+
+    int dosaQunty = 0;
+    int dosaPrice = 0;
+    int dosaTotal = 0;
+
+    int totalBill = 0;
 
 public:
     void Pizaa()
     {
         foodName = "Pizza";
-        foodPrice = 300;
+        pizzaPrice = 300;
 
         cout << "\nFood Name: " << foodName << endl;
 
-        cout << "Food Price: " << foodPrice << endl;
+        cout << "Food Price: " << pizzaPrice << endl;
 
         cout << "\nEnter Quantity: ";
-        cin >> foodQnty;
+        cin >> pizzaQunty;
 
-        totalValue = foodPrice * foodQnty;
+        pizzaTotal = pizzaPrice * pizzaQunty;
+        totalBill = totalBill + pizzaTotal;
 
-        cout << "Total Price: " << totalValue << endl;
+        cout << "Total Pizza Price: " << pizzaTotal << endl;
+        // cout << "Total Bill: " << totalBill << endl;
     }
 
     void Burger()
     {
         foodName = "Burger";
-        foodPrice = 120;
+        burgerPrice = 120;
 
         cout << "\nFood Name: " << foodName << endl;
-        cout << "Food Price: " << foodPrice << endl;
+        cout << "Food Price: " << burgerPrice << endl;
 
         cout << "\nEnter Quantity: ";
-        cin >> foodQnty;
+        cin >> burgerQunty;
 
-        totalValue = foodPrice * foodQnty;
+        burgerTotal = burgerPrice * burgerQunty;
+        totalBill = totalBill + burgerTotal;
 
-        cout << "\nTotal Price: " << totalValue << endl;
+        cout << "\nTotal Burger Price: " << burgerTotal << endl;
+        // cout << "Total Bill: " << totalBill << endl;
     }
 
     void pasta()
     {
         foodName = "Pasta";
-        foodPrice = 220;
+        pastaPrice = 220;
 
         cout << "Food Name: " << foodName << endl;
-        cout << "Food Price: " << foodPrice << endl;
+        cout << "Food Price: " << pastaPrice << endl;
 
         cout << "\nEnter Quantity: ";
-        cin >> foodQnty;
+        cin >> pastaQunty;
 
-        totalValue = foodPrice * foodQnty;
+        pastaTotal = pastaPrice * pastaQunty;
+        totalBill = totalBill + pastaTotal;
 
-        cout << "\nTotal Price: " << totalValue << endl;
+        cout << "\nTotal Price: " << pastaTotal << endl;
+        // cout << "Total Bill: " << totalBill << endl;
     }
 
     void Dosa()
     {
         foodName = "Dosa";
-        foodPrice = 280;
+        dosaPrice = 280;
 
         cout << "\nFood Name: " << foodName << endl;
-        cout << "Food Price: " << foodPrice << endl;
+        cout << "Food Price: " << dosaPrice << endl;
 
         cout << "\nEnter Quantity: ";
-        cin >> foodQnty;
+        cin >> dosaQunty;
 
-        totalValue = foodPrice * foodQnty;
+        dosaTotal = dosaPrice * dosaQunty;
+        totalBill = totalBill + dosaTotal;
 
-        cout << "\nTotal Price: " << totalValue << endl;
+        cout << "\nTotal Price: " << dosaTotal << endl;
+        // cout << "Total Bill: " << totalBill << endl;
     }
 };
 
@@ -144,17 +169,45 @@ public:
     void showEntireInfo()
     {
         systemName = "Goti Lo";
-        cout << "\n\nSystem Name: " << systemName << endl << endl;
-        ;
+        cout << "\n\nSystem Name: " << systemName << endl
+             << endl;
 
         displayUserInfo();
         displayPersonInfo();
     }
 };
 
+class Admin : public Server
+{
+public:
+    void FinalInfo()
+    {
+        cout << "\nFood\t"<<"Price\t"<<"Qunty\t"<<"TotalPrice"<<endl;
+
+        if (pizzaQunty > 0)
+        {
+            cout << "\nPizaa\t" << pizzaPrice << "\t" << pizzaQunty << "\t" << pizzaTotal << endl;
+        }
+        if (burgerQunty > 0)
+        {
+            cout << "\nBurger\t" << burgerPrice << "\t" << burgerQunty << "\t" << burgerTotal << endl;
+        }
+        if (pastaQunty > 0)
+        {
+            cout << "\nPasta\t" << pastaPrice << "\t" << pastaQunty << "\t" << pastaTotal << endl;
+        }
+        if (dosaQunty > 0)
+        {
+            cout << "\nDosa\t" << dosaPrice << "\t" << dosaQunty << "\t" << dosaTotal << endl;
+        }
+
+        cout << "\nYour Total Bill: " << totalBill << endl;
+    }
+};
+
 int main()
 {
-    Server d1;
+    Admin d1;
     d1.getUserInfo();
 
     int choice;
@@ -214,8 +267,9 @@ int main()
         d1.Dosa();
     }
 
-     d1.showEntireInfo();
+    d1.showEntireInfo();
 
+    d1.FinalInfo();
 
     return 0;
 }
