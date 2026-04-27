@@ -221,8 +221,9 @@ int main()
             cin >> fuel;
 
             // Creating objects dynamically
-            if (type == 1)
+            if (type == 1){
                 arr[count++] = new Car(id, manu, model, year, fuel);
+            }
 
             else if (type == 2)
             {
@@ -242,11 +243,13 @@ int main()
                 arr[count++] = new SportsCar(id, manu, model, year, fuel, b, s);
             }
 
-            else if (type == 4)
+            else if (type == 4){
                 arr[count++] = new Sedan(id, manu, model, year, fuel);
+            }
 
-            else if (type == 5)
+            else if (type == 5){
                 arr[count++] = new SUV(id, manu, model, year, fuel);
+            }
 
             else if (type == 6)
             {
