@@ -346,8 +346,9 @@ int main()
             }
         }
 
-        else if (choice == 6){
-            cout<<"\nThank You For Using Banking System !!\n";
+        else if (choice == 6)
+        {
+            cout << "\nThank You For Using Banking System !!\n";
         }
 
         else if (choice != 6)
