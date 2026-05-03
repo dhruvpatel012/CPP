@@ -4,6 +4,7 @@ using namespace std;
 #define MAX 100
 
 // ================= BASE CLASS =================
+
 class LibraryItem {
 private:
     string title, author, dueDate;
